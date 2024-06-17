@@ -11,7 +11,7 @@ function LogoutBtn() {
 				dispatch(logout());
 			})
 			.catch((error) => {
-				console.log("Component Header :: LogoutBtn :: ", error);
+				console.error("Component Header :: LogoutBtn :: ", error);
 				throw error;
 			});
 	};

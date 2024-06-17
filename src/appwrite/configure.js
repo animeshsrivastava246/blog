@@ -23,7 +23,7 @@ export class Service {
 				{ title, content, featuredImage, status, userId }
 			);
 		} catch (error) {
-			console.log("Appwrite Service :: createPost :: ", error);
+			console.error("Appwrite Service :: createPost :: ", error);
 			throw error;
 		}
 	}
@@ -36,7 +36,7 @@ export class Service {
 				slug
 			);
 		} catch (error) {
-			console.log("Appwrite Service :: getPost :: ", error);
+			console.error("Appwrite Service :: getPost :: ", error);
 			throw error;
 		}
 	}
@@ -50,7 +50,7 @@ export class Service {
 				{ title, content, featuredImage, status }
 			);
 		} catch (error) {
-			console.log("Appwrite Service :: updatePost :: ", error);
+			console.error("Appwrite Service :: updatePost :: ", error);
 			throw error;
 		}
 	}
@@ -64,7 +64,7 @@ export class Service {
 			);
 			return true;
 		} catch (error) {
-			console.log("Appwrite Service :: deletePost :: ", error);
+			console.error("Appwrite Service :: deletePost :: ", error);
 			throw error;
 		}
 	}
@@ -77,7 +77,7 @@ export class Service {
 				queries
 			);
 		} catch (error) {
-			console.log("Appwrite Service :: getPosts :: ", error);
+			console.error("Appwrite Service :: getPosts :: ", error);
 			throw error;
 		}
 	}
@@ -88,7 +88,7 @@ export class Service {
 		try {
 			return this.storage.getFilePreview(config.appwriteBucketId, fileId);
 		} catch (error) {
-			console.log("Appwrite Service :: getFilePreview :: ", error);
+			console.error("Appwrite Service :: getFilePreview :: ", error);
 			throw error;
 		}
 	}
@@ -101,7 +101,7 @@ export class Service {
 				file
 			);
 		} catch (error) {
-			console.log("Appwrite Service :: uploadFile :: ", error);
+			console.error("Appwrite Service :: uploadFile :: ", error);
 			throw error;
 		}
 	}
@@ -111,7 +111,7 @@ export class Service {
 			await this.storage.deleteFile(config.appwriteBucketId, fileId);
 			return true;
 		} catch (error) {
-			console.log("Appwrite Service :: deleteFile :: ", error);
+			console.error("Appwrite Service :: deleteFile :: ", error);
 			throw error;
 		}
 	}

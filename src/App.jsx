@@ -19,7 +19,7 @@ function App() {
 				}
 			})
 			.catch((error) => {
-				console.log("App :: authService :: ", error);
+				console.error("App :: authService :: ", error);
 				throw error;
 			})
 			.finally(() => setLoading(false));

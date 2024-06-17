@@ -21,7 +21,7 @@ function Login() {
 				navigate("/");
 			}
 		} catch (error) {
-			console.log("Login :: login :: ", error);
+			console.error("Login :: login :: ", error);
 			setError(error.message);
 			throw error;
 		}

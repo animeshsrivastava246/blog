@@ -22,7 +22,7 @@ function Signup() {
 				navigate("/");
 			}
 		} catch (error) {
-			console.log("Signup :: create :: ", error);
+			console.error("Signup :: create :: ", error);
 			setError(error.message);
 			throw error;
 		}
